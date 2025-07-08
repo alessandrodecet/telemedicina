@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 
 @Data
@@ -25,7 +27,7 @@ public class Paziente {
 
     private String cognome;
 
-    private Date dataNascita;
+    private LocalDate dataNascita;
 
     @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "comorbidita_paziente", joinColumns = @JoinColumn(name = "paziente_id"))

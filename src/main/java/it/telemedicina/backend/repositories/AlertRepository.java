@@ -1,4 +1,7 @@
 package it.telemedicina.backend.repositories;
 
-public interface AlertRepository {
+import it.telemedicina.backend.domain.Alert;
+import org.springframework.data.repository.CrudRepository;
+
+public interface AlertRepository extends CrudRepository<Alert, Long> {
 }

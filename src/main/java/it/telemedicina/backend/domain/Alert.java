@@ -18,4 +18,6 @@ public class Alert {
     private Long id;
 
     private Date date;
+
+    private String description;
 }

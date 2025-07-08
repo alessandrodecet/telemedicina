@@ -15,7 +15,7 @@ public class Diabetologo {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "diabetologo_id_seq")
     private Long id;
 
-    private String name;
+    private String nome;
 
     private String cognome;
 

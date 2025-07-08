@@ -1,4 +1,7 @@
 package it.telemedicina.backend.repositories;
 
-public interface TerapiaRepository {
+import it.telemedicina.backend.domain.Terapia;
+import org.springframework.data.repository.CrudRepository;
+
+public interface TerapiaRepository extends CrudRepository<Terapia, Long> {
 }
