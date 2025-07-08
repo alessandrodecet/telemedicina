@@ -1,7 +1,6 @@
 package it.telemedicina.backend.repositories;
 
 import it.telemedicina.backend.domain.Diabetologo;
-import jakarta.persistence.Table;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD )
 
 public class DiabetologoRepositoryTest {
-    private DiabetologoRepository underTest;
+    private final DiabetologoRepository underTest;
 
     @Autowired
     public DiabetologoRepositoryTest(DiabetologoRepository underTest) {

@@ -1,0 +1,25 @@
+#docker-compose.yml
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0 # Utilizza la versione ufficiale di MySQL 8.0
+    container_name: telemedicina-mysql
+    ports:
+      - "3306:3306" #Mappa la porta del mio host(3306) alla porta(3306) del container.
+    environment:
+      #Variabili d'ambiente per la configurazione di MySQL
+      MYSQL_ROOT_PASSWORD: teleadmin
+      MYSQL_DATABASE: telemedicina_db
+      MYSQL_USER: springuser
+      MYSQL_PASSWORD: springpassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      start_period: 10s
+volumes:
+  mysql_data:
