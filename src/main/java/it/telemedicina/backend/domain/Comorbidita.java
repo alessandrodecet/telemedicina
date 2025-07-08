@@ -1,0 +1,17 @@
+package it.telemedicina.backend.domain;
+
+
+public enum Comorbidita {
+    IPERTENSIONE,
+    CARDIOPATIA_ISCHEMICA,
+    SCOMPENSO_CARDIACO,
+    DISLIPIDEMIA,
+    OBESITA,
+    RETINOPATIA_DIABETICA,
+    NEFROPATIA_DIABETICA,
+    NEUROPATIA_PERIFERICA,
+    DEPRESSIONE,
+    STEATOSI_EPATICA,
+    OSAS;
+
+}
